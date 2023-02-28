@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+:root {
+  --red: #ff5757;
+  --blue: rgb(38, 143, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+html {
+  height: 100%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.488);
+}
+
+a {
+  color: var(--red);
+}
+
+body {
+  background-size: cover;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.parent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  width: 100%;
+  border: none;
+  height: 50px;
+  background-color: var(--blue);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 150ms ease-in-out;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: var(--red);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:active {
+  transform: scale(0.9);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  background-color: white;
+  line-height: 2;
+  padding: 80px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 400;
+  background-color: var(--red);
+  color: white;
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+}
+
+.studentDetails {
+  background-image: url("./images/bg.webp");
+  background-size: cover;
+  padding: 0px;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.inner {
+  width: 60%;
+  height: fit-content;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  color: var(--blue);
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+input[type="text"],
+select,
+input[type="date"] {
+  width: 100%;
+  height: 60px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgb(228, 228, 228);
+  background: none;
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgb(38, 143, 255);
+}
+
+th {
+  background-color: rgb(38, 143, 255);
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* CERTIFICATE ----------------------------------------------------------------------------------------------------------------------------- */
+
+.main {
+  height: 720px;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdf {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/certi.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+.nonVisible {
+  display: none;
+  position: absolute;
+}
+
+.stuName {
+  font-family: Great Vibes;
+  font-size: 80px;
+  color: var(--red);
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+.date {
+  width: 160px;
+  position: absolute;
+  left: 0;
+  margin-left: 210px;
+  margin-top: 330px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.message {
+  font-size: 20px;
+  font-weight: 500;
+  width: 540px;
+  text-align: center;
+  position: absolute;
+  margin-top: 120px;
+  line-height: 1.8;
+}
+
+/* For Desktop ---------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+  .quotes {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .studentDetails {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .inner {
+    width: 100%;
   }
 }
